@@ -2,7 +2,7 @@
 ## 📢 Join Our Community
 
 # Telegram Channel: .[Channel](https://t.me/Offical_Im_kazuha)
-# GitHub Repository: [Fireverse](https://github.com/Kazuha787/Kaleido-Bot.git)
+# GitHub Repository: [Kaleido](https://github.com/Kazuha787/Kaleido-Bot.git)
 
 ## 🌟 Features
 THIS IS BETA VERSION SO MAYBE WORK OR MAYBE NOT BECAUSE SERVER IS LAGGY
