@@ -66,3 +66,22 @@ THIS IS BETA VERSION SO MAYBE WORK OR MAYBE NOT BECAUSE SERVER IS LAGGY
    ```bash
    npm run start
    ```
+
+## Disclaimer
+
+🚨 READ THIS BEFORE USING 🚨
+
+This repository is provided as-is, with no guarantees, no warranties, and absolutely no refunds—because, well, it’s free. By using this code, you agree to the following:
+
+I am NOT responsible if you lose funds, assets, or anything of value.
+
+I am NOT liable for any bugs, exploits, or security vulnerabilities that may arise.
+
+You take full responsibility for running this code—test, verify, and use at your own risk.
+
+If something breaks, it’s on you. Don’t come knocking.
+
+
+By using this project, you accept these terms. If you don’t agree, don’t use it.
+
+🚀 Proceed wisely.
