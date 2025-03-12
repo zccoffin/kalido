@@ -3,22 +3,49 @@
 
 # Telegram Channel: .[Channel](https://t.me/Offical_Im_kazuha)
 # GitHub Repository: [Kaleido](https://github.com/Kazuha787/Kaleido-Bot.git)
+# ⚠️ Essential Security Rules #
 
+To ensure optimal performance and prevent account restrictions, please adhere to the following guidelines:
+
+Account & Device Restrictions: A maximum of 2 accounts per device and 5 accounts per IP subnet (including Hotspots) are allowed. Exceeding these limits can result in temporary or permanent bans.
+
+VPN/Proxy Limitations: Using VPNs or proxies can lead to detection and account suspension. Always connect through a genuine, unaltered network.
+
+Anti-Bot Measures: The bot mimics human-like behavior to avoid detection. Refrain from making frequent mining requests within a short timeframe.
+
+Request Frequency: Mining attempts are limited to 5 per hour per account. Exceeding this limit may trigger temporary cooldowns or account restrictions.
+
+
+
+---
+
+This version maintains the same message but adjusts the structure and wording for variety.
+
+# 📌 Key Features
+✅ **Session Management**
+•Saves each wallet's mining session in a session_{wallet}.json file.
+•Resumes previous sessions upon restart.
+
+✅ **Auto-Retry & Error Handling**
+•Exponential Backoff: If an API error occurs, the script retries with an increasing delay.
+•Status Code Handling: Handles 400, 401 errors (permanent failure) and 429, 5xx errors (retry with delay).
+
+✅ **Mining Status & Earnings Tracking**
+•Displays mining statistics
+
+✅ **Referral Bonus System**
+•Automatically detects and applies referral bonuses to mining earnings.
+
+✅ **Cross-Platform Compatibility**:
+•Works on Windows, macOS, Linux, *Android (run with ubuntu proot/chroot).
+
+---
 ## 🌟 Features
 THIS IS BETA VERSION SO MAYBE WORK OR MAYBE NOT BECAUSE SERVER IS LAGGY
 
 ## Register
 - https://kaleidofinance.xyz/testnet?ref=ZXTAEAVF
 
-## 🌟 Features
-
-- **Multi-Wallet Mining Support**: Manage multiple wallets simultaneously.
-- **Real-Time Earnings Dashboard**: Track your earnings in real-time.
-- **Automatic Pending → Paid Conversion**: Automatically convert pending earnings to paid balance.
-- **Quantum Hash Algorithm Implementation**: Optimized for quantum mining.
-- **Auto-Retry with Exponential Backoff**: Handle network issues gracefully.
-- **Detailed Mining Statistics & Analytics**: Get insights into your mining performance.
-- **Cross-Platform Compatibility**: Works on Windows, macOS, and Linux.
 
 ## 🚀 Installation
 
@@ -33,7 +60,7 @@ THIS IS BETA VERSION SO MAYBE WORK OR MAYBE NOT BECAUSE SERVER IS LAGGY
    ```
 3. Create a wallets.txt file and add your wallet addresses (one per line):
    ```bash
-   nano wallets.txt
+   nano wallets.json
    ```
 4. Run Bot
    ```bash
