@@ -56,7 +56,8 @@ THIS IS BETA VERSION SO MAYBE WORK OR MAYBE NOT BECAUSE SERVER IS LAGGY
    ```
 2. Install dependencies:
    ```bash
-   npm install
+   npm install  if errir theb install tgese npm install chalk-animation@latest
+
    ```
 3. Create a wallets.txt file and add your wallet addresses (one per line):
    ```bash
