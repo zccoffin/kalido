@@ -1,10 +1,9 @@
-import axios from 'axios'
-import chalk from 'chalk'
+import axios from 'axios';
+import chalk from 'chalk';
 import * as fs from 'fs/promises';
 import { readFile } from 'fs/promises';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { displayBanner } from './utils/banner.js';
 
 class KaleidoMiningBot {
   constructor(wallet, botIndex) {
@@ -138,17 +137,16 @@ class KaleidoMiningBot {
 
   async updateBalance(finalUpdate = false) {
     try {
-
       if (this.pauseStart) {
         const downtime = Date.now() - this.pauseStart;
         this.pausedDuration += downtime;
         console.log(chalk.yellow(`[Wallet ${this.botIndex}] Resumed after downtime of ${(downtime / 1000).toFixed(2)} seconds.`));
         this.pauseStart = null;
       }
+
       const newEarnings = this.calculateEarnings();
-      if (!finalUpdate && newEarnings < 0.00000001) {
-        return;
-      }
+      if (!finalUpdate && newEarnings < 0.00000001) return;
+
       const payload = {
         wallet: this.wallet,
         earnings: {
@@ -175,7 +173,6 @@ class KaleidoMiningBot {
         this.logStatus(finalUpdate);
       }
     } catch (error) {
-
       if (!this.pauseStart) {
         this.pauseStart = Date.now();
         console.log(chalk.yellow(`[Wallet ${this.botIndex}] Entering maintenance mode, pausing earnings calculation.`));
@@ -229,11 +226,9 @@ class KaleidoMiningBot {
     ];
 
     function buildHorizontalTable(headers, data) {
-      const colWidths = headers.map((header, i) => {
-        return Math.max(header.toString().length, data[i].toString().length) + 2;
-      });
+      const colWidths = headers.map((header, i) => Math.max(header.length, data[i].toString().length) + 2);
       const horizontalLine = '+' + colWidths.map(w => '-'.repeat(w)).join('+') + '+';
-      const headerRow = '|' + headers.map((h, i) => ' ' + h.toString().padEnd(colWidths[i] - 1, ' ')).join('|') + '|';
+      const headerRow = '|' + headers.map((h, i) => ' ' + h.padEnd(colWidths[i] - 1, ' ')).join('|') + '|';
 
       const colorFunctions = [
         chalk.cyan,
@@ -314,7 +309,6 @@ export class MiningCoordinator {
     }
 
     this.isRunning = true;
-    displayBanner();
     const wallets = await this.loadWallets();
 
     if (wallets.length === 0) {
@@ -343,4 +337,4 @@ export class MiningCoordinator {
       process.exit();
     });
   }
-    }
+}
